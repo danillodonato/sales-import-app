@@ -9,19 +9,25 @@
 </p><p>DB_USERNAME=sales_import_user
 </p><p>DB_PASSWORD=123abc
 </p>
-2 - Instalar dependências via composer
+
+2 - Subir as imagens do docker
+
+- docker-compose build app
+- docker-compose up -d
+
+3 - Instalar dependências via composer
 
 - docker-compose exec app composer install
 
-3 - Instalar dependências via NPM
+4 - Instalar dependências via NPM
 
 - docker-compose exec app npm install
 - docker-compose exec app npm run dev
 
-4 - Geração de chave
+5 - Geração de chave
 
 - docker-compose exec app php artisan key:generate
 
-5 - Executar migrations
+6 - Executar migrations
 
 - docker-compose exec app php artisan migrate
